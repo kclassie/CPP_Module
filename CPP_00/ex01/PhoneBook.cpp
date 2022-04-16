@@ -13,6 +13,7 @@ PhoneBook::~PhoneBook(void)
 //contacts counter (no more than 8 contacts in PhoneBook)
 int PhoneBook::_contNum = 0;
 
+
 //********* PhoneBook commands **********//
 
 void PhoneBook::_addContact(void)
