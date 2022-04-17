@@ -1,9 +1,9 @@
-NAME = zombie
+NAME = weapon
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror
-SOURCES = main.cpp Zombie.cpp zombieHorde.cpp
+SOURCES = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
-HEADER = Zombie.hpp
+HEADER = HumanA.hpp HumanB.hpp Weapon.hpp
 
 $(NAME): Makefile $(OBJECTS) $(HEADER)
 	$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJECTS)
