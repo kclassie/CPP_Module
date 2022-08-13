@@ -1,11 +1,10 @@
-NAME = zombie
+NAME = replace
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-SOURCES = main.cpp Zombie.cpp  ZombieHorde.cpp
+SOURCES = main.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
-HEADER = Zombie.hpp
 
-$(NAME): Makefile $(OBJECTS) $(HEADER)
+$(NAME): Makefile $(OBJECTS)
 	$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJECTS)
 $(OBJECTS): $(SOURCES)
 	$(CPP) $(CPPFLAGS) -c $(SOURCES)
@@ -14,7 +13,7 @@ all : $(NAME)
 clean:
 	rm -rf $(OBJECTS)
 fclean:
-	rm -rf $(OBJECTS) $(NAME)
+	rm -rf $(OBJECTS) $(NAME) *.replace
 re:	fclean all
 
 .PHONY: all clean fclean re

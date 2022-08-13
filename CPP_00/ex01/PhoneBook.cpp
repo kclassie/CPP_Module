@@ -107,7 +107,6 @@ void PhoneBook::_displayContactInfo(int index)
 
 void PhoneBook::_printElem(std::string elem, std::string sep, int len)
 {
-
 	std::cout	<< std::setw(len)
 				<< elem
 				<< sep;
@@ -139,8 +138,8 @@ void PhoneBook::_displayContacts(void)
 	{
 		std::cout << sep;
 		this->_printElem(std::to_string(i), sep, 10);
-		this->_printElem(this->_contact[i].alignField(this->_contact[i].first_name, 10), sep, 10);
-		this->_printElem(this->_contact[i].alignField(this->_contact[i].last_name, 10), sep, 10);
+		this->_printElem(this->_contact[i].alignField(this->_contact[i].firstName, 10), sep, 10);
+		this->_printElem(this->_contact[i].alignField(this->_contact[i].lastName, 10), sep, 10);
 		this->_printElem(this->_contact[i].alignField(this->_contact[i].nickname, 10), sep, 10);
 		std::cout << "\n";
 	}

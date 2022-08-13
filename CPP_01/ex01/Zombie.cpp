@@ -7,12 +7,12 @@ Zombie::Zombie(void)
 
 Zombie::~Zombie(void)
 {
-	std::cout	<< "Zombie <" << this->_zombieName << "> died =(\n";
+	std::cout	<< "Zombie " << this->_zombieName << " died =(\n";
 }
 
 void	Zombie::announce(void)
 {
-	std::cout 	<< "<" << this->_zombieName << "> "
+	std::cout 	<< "" << this->_zombieName << ": "
 				<< "BraiiiiiiinnnzzzZ...\n";
 }
 

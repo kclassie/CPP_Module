@@ -9,11 +9,11 @@ public:
 
 	Contact(void);
 
-	std::string	first_name;
-	std::string	last_name;
+	std::string	firstName;
+	std::string	lastName;
 	std::string	nickname;
-	std::string phone_number;
-	std::string darkest_secret;
+	std::string phoneNumber;
+	std::string darkestSecret;
 
 	void saveContact(Contact *cont);
 	std::string	alignField(std::string field, int width);

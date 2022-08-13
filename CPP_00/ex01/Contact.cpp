@@ -13,15 +13,15 @@ Contact::~Contact(void)
 void Contact::saveContact(Contact *cont)
 {
 	std::cout << "Please, type the first name: ";
-	std::cin >> cont->first_name;
+	std::cin >> cont->firstName;
 	std::cout << "Please, type the last name: ";
-	std::cin >> cont->last_name;
+	std::cin >> cont->lastName;
 	std::cout << "Please, type the nickname: ";
 	std::cin >> cont->nickname;
 	std::cout << "Please, type the phone_number: ";
-	std::cin >> cont->phone_number;
+	std::cin >> cont->phoneNumber;
 	std::cout << "Please, type the darkest secret: ";
-	std::cin >> cont->darkest_secret;
+	std::cin >> cont->darkestSecret;
 }
 
 std::string	Contact::alignField(std::string field, int width)
