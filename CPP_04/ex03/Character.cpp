@@ -1,7 +1,7 @@
 #include "Character.hpp"
 
 Character::Character( ) {
-	std::cout << "Character default constructor called" << std::endl;
+//	std::cout << "Character default constructor called" << std::endl;
 	this->_name = "default name";
 	for(int i = 0; i < 4; i++)
 		_materiasSlots[i] = NULL;
@@ -11,7 +11,7 @@ Character::Character( ) {
 }
 
 Character::Character( std::string const & name ) {
-	std::cout << "Character constructor called" << std::endl;
+//	std::cout << "Character constructor called" << std::endl;
 	this->_name = name;
 	for(int i = 0; i < 4; i++)
 		_materiasSlots[i] = NULL;
@@ -21,13 +21,13 @@ Character::Character( std::string const & name ) {
 }
 
 Character::Character( const Character & charRef ) {
-	std::cout << "Character copy constructor called" << std::endl;
+//	std::cout << "Character copy constructor called" << std::endl;
 	*this = charRef;
 	return;
 }
 
 Character & Character::operator=( const Character & charRef ) {
-	std::cout << "Character assignment operator called" << std::endl;
+//	std::cout << "Character assignment operator called" << std::endl;
 	this->_name = charRef._name;
 	for( int i = 0; i < 4; i++ ) {
 		if( charRef._materiasSlots[i] ) {
@@ -48,7 +48,7 @@ Character & Character::operator=( const Character & charRef ) {
 }
 
 Character::~Character( void ) {
-	std::cout << "Character destructor called" << std::endl;
+//	std::cout << "Character destructor called" << std::endl;
 	for( int i = 0; i < 4; i++ ) {
 		if( this->_materiasSlots[i] != NULL )
 			delete this->_materiasSlots[i];

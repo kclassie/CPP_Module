@@ -9,21 +9,19 @@ Dog::Dog( void ) {
 
 Dog::Dog( const Dog & dog ) {
 	std::cout << "Dog copy constructor called" << std::endl;
-	this->_type = dog._type;
-	this->_brain = new Brain();
-	for (int i = 0; i < 100; i++) {
-		this->_brain[i] = dog._brain[i];
-	}
+	*this = dog;
 	return;
 }
 
 Dog & Dog::operator=( const Dog & dog ) {
 	std::cout << "Dog assignment operator called" << std::endl;
-	if ( this != & dog ) {
-		this->_type = dog._type;
-		this->_brain = dog.getBrains();
+
+	this->_type = dog._type;
+	this->_brain = new Brain();
+	for( int i = 0; i < 100; i++ ) {
+		this->_brain->setIdea(dog._brain->getIdea(i), i);
 	}
-	return *this;
+	return *this ;
 }
 
 Dog::~Dog( void ) {

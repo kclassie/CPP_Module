@@ -1,25 +1,25 @@
 #include "Ice.hpp"
 
 Ice::Ice( void ) {
-	std::cout << "Ice default constructor called" << std::endl;
+//	std::cout << "Ice default constructor called" << std::endl;
 	this->_type = "ice";
 	return;
 }
 
 Ice::Ice( const Ice & ice) {
-	std::cout << "Ice copy constructor called" << std::endl;
+//	std::cout << "Ice copy constructor called" << std::endl;
 	*this = ice;
 	return;
 }
 
 Ice & Ice::operator=( const Ice & ice) {
-	std::cout << "Cure assignment operator called" << std::endl;
+//	std::cout << "Cure assignment operator called" << std::endl;
 	this->_type = ice._type;
 	return *this;
 }
 
 Ice::~Ice( void ) {
-	std::cout << "Ice destructor called" << std::endl;
+//	std::cout << "Ice destructor called" << std::endl;
 	return;
 }
 

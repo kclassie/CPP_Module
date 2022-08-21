@@ -8,19 +8,19 @@ Cat::Cat( void ) {
 }
 
 Cat::Cat( const Cat & cat ) {
-	std::cout << "Copy Cat constructor called" << std::endl;
-	this->_type = cat._type;
-	this->_brain = cat._brain;
+	std::cout << "Cat copy constructor called" << std::endl;
+	*this = cat;
 	return;
 }
 
 Cat & Cat::operator=( const Cat & cat ) {
 	std::cout << "Cat assignment operator called" << std::endl;
-	if ( this != & cat ) {
-		this->_type = cat._type;
-		this->_brain = cat._brain;
+	this->_type = cat._type;
+	this->_brain = new Brain();
+	for( int i = 0; i < 100; i++ ) {
+		this->_brain->setIdea(cat._brain->getIdea(i), i);
 	}
-	return *this;
+	return *this ;
 }
 
 Cat::~Cat( void ) {
