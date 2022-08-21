@@ -6,4 +6,5 @@ Introducing to Object-Oriented Programming by C++
 - **CPP_02:** Ad-hoc polymorphism, operator overloading and Orthodox Canonical class form.
 - **CPP_03:** Inheritance.
 - **CPP_04:** Subtype polymorphism, abstract classes, interfaces.
+- **CPP_05:** Repetition and Exceptions.
 
