@@ -27,9 +27,9 @@ int main()
 		std::cout << "\033[32mAnimal type is: \033[0m" << animals[i]->getType() << " " << std::endl;
 		std::cout << "\033[32mAnimal says: \033[0m";
 		animals[i]->makeSound();
-		std::cout << "\033[32mAnimal idea № 5 is: \033[0m" << animals[i]->getBrains()->getIdea(5) << std::endl;
+		std::cout << "\033[32mAnimal idea № 6 is: \033[0m" << animals[i]->getBrains()->getIdea(5) << std::endl;
 		animals[i]->getBrains()->setIdea("WTF!?! ಠ_ಠ", 5);
-		std::cout << "\033[32mAnimal idea № 5 is: \033[0m" << animals[i]->getBrains()->getIdea(5) << std::endl;
+		std::cout << "\033[32mAnimal idea № 6 is: \033[0m" << animals[i]->getBrains()->getIdea(5) << std::endl;
 	}
 
 	for ( int i = 0; i < 10; i++)  {
@@ -43,15 +43,15 @@ int main()
 		std::cout << "\033[32mAnimal type is: \033[0m" << dogAnimal->getType() << " " << std::endl;
 		std::cout << "\033[32mAnimal says: \033[0m";
 		dogAnimal->makeSound();
-		std::cout << "\033[32mAnimal idea № 5 is: \033[0m" << dogAnimal->getBrains()->getIdea(5) << std::endl;
+		std::cout << "\033[32mAnimal idea № 6 is: \033[0m" << dogAnimal->getBrains()->getIdea(5) << std::endl;
 		dogAnimal->getBrains()->setIdea("WTF!?! ಠ_ಠ", 5);
-		std::cout << "\033[32mAnimal idea № 5 is: \033[0m" << dogAnimal->getBrains()->getIdea(5) << std::endl;
+		std::cout << "\033[32mAnimal idea № 6 is: \033[0m" << dogAnimal->getBrains()->getIdea(5) << std::endl;
 		Dog dogCopy(*(Dog*)dogAnimal);
 		delete dogAnimal;
 		std::cout << "\033[32mAnimal type is: \033[0m" << dogCopy.getType() << " " << std::endl;
 		std::cout << "\033[32mAnimal says: \033[0m";
 		dogCopy.makeSound();
-		std::cout << "\033[32mAnimal idea № 5 is: \033[0m" << dogCopy.getBrains()->getIdea(5) << std::endl;
+		std::cout << "\033[32mAnimal idea № 6 is: \033[0m" << dogCopy.getBrains()->getIdea(5) << std::endl;
 		std::cout << "dogCopy's brain copied from dogAnimal=>\n" << dogCopy.getBrains() << "\n";
 	}
 	return 0;
