@@ -1,0 +1,20 @@
+NAME = base
+CPP = c++
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+SOURCES = 	main.cpp Base.cpp
+OBJECTS = $(SOURCES:.cpp=.o)
+HEADERS = Base.hpp A.hpp B.hpp C.hpp
+
+$(NAME): Makefile $(OBJECTS) $(HEADERS)
+	$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJECTS)
+$(OBJECTS): $(SOURCES)
+	$(CPP) $(CPPFLAGS) -c $(SOURCES)
+
+all : $(NAME)
+clean:
+	rm -rf $(OBJECTS)
+fclean:
+	rm -rf $(OBJECTS) $(NAME) *_shrubbery
+re:	fclean all
+
+.PHONY: all clean fclean re
