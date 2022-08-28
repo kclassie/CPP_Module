@@ -21,4 +21,5 @@ Introducing to Object-Oriented Programming by C++
     * ***function templates***: this exercise is about writing 3 simple function templates: swap(), min() and max().
     * ***template for array iter***: this exercise is about writing a generic function to iterate through arrays.
     * ***class templates***: this exercise is about writing a class template that behaves like an array.
+- **CPP_08:** Templated containers, iterators, algorithms
 
